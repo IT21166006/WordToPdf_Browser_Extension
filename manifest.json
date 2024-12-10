@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Word to PDF Converter",
+  "version": "1.0.0",
+  "description": "Quickly convert Word files to PDF with a single click! Supports light and dark modes.",
+  "author": "Y.Tharindu Dilshan",
+  "permissions": ["storage"],
+  "host_permissions": ["https://v2.convertapi.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
