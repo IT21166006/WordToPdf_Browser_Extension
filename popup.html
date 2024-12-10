@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word to PDF Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Base styles (Light theme as default) */
+    :root {
+      --bg-color: #f0f8ff;
+      --text-color: #000;
+      --header-color: #4a90e2;
+      --input-border: #4a90e2;
+      --button-bg: #4a90e2;
+      --button-bg-hover: #357ABD;
+      --download-bg: #5cb85c;
+      --download-bg-hover: #4e9c4e;
+    }
+    /* Dark theme styles */
+    .dark-theme {
+      --bg-color: #1e1e1e;
+      --text-color: #fff;
+      --header-color: #90caf9;
+      --input-border: #90caf9;
+      --button-bg: #90caf9;
+      --button-bg-hover: #6fa3d4;
+      --download-bg: #66bb6a;
+      --download-bg-hover: #57a857;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    h1 {
+      font-size: 22px;
+      color: var(--header-color);
+      margin-bottom: 15px;
+    }
+    #fileInput {
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 2px solid var(--input-border);
+      color: var(--header-color);
+    }
+    #convertBtn, #downloadBtn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #fff;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    #convertBtn {
+      background-color: var(--button-bg);
+    }
+    #convertBtn:hover {
+      background-color: var(--button-bg-hover);
+    }
+    #downloadBtn {
+      background-color: var(--download-bg);
+      display: none;
+    }
+    #downloadBtn:hover {
+      background-color: var(--download-bg-hover);
+    }
+    #loadingGif {
+      display: none;
+      margin-top: 15px;
+      width: 100px;
+    }
+
+    /* Toggle button for theme */
+    #themeToggle {
+      border: none;
+      border-radius: 5px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #000;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+      
+    }
+  </style>
+</head>
+<body>
+<!-- Theme toggle button -->
+  <button id="themeToggle"><i class="fas fa-moon"></i> Dark Mode</button>
+  <br>
+  <h1>Word to PDF Converter</h1>
+  <img src="https://www.qoppa.com/wp-content/uploads/Covert-Word-to-PDF-Graphic-2-768x433.png" height="100px">
+
+  <input type="file" id="fileInput" accept=".doc,.docx" />
+  <button id="convertBtn">Convert to PDF</button>
+  <button id="downloadBtn">Download PDF</button>
+  <br>
+  <img id="loadingGif" src="loading.gif" alt="Loading...">
+  
+  
+
+  
+
+  <script src="popup.js"></script>
+</body>
+<footer>
+  <p>Author: Y.Tharindu Dilshan</p>
+  <p><a href="mailto:tdmaxers@gmail.com">tdmaxers@gmail.com</a></p>
+</footer>
+</html>
